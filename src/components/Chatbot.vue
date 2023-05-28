@@ -65,7 +65,7 @@ export default {
         const chatResponse = response.data.choices[0].message.content;
         messages.value.push({ sender: 'bot', message: chatResponse });
         console.log(chatResponse);
-        // Do something with the chat response
+        // Do something with the chat response.
       } catch (error) {
         console.error(error);
         // Handle the error
