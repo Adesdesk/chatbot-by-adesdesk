@@ -28,6 +28,7 @@ export default {
       messages.value.push({ type: 'user', message: userMessage });
       userInput.value = '';
 <<<<<<< HEAD
+<<<<<<< HEAD
       await sendMessage(userMessage);
     };
 
@@ -56,6 +57,8 @@ export default {
         console.error(error);
         // Handle the error
       }
+=======
+>>>>>>> parent of ccaae04 (Added API call functionality)
 =======
 >>>>>>> parent of ccaae04 (Added API call functionality)
     };
