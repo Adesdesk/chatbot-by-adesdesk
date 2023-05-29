@@ -27,40 +27,6 @@ export default {
       const userMessage = userInput.value;
       messages.value.push({ type: 'user', message: userMessage });
       userInput.value = '';
-<<<<<<< HEAD
-<<<<<<< HEAD
-      await sendMessage(userMessage);
-    };
-
-    const sendMessage = async (userMessage) => {
-      const openaiEndpoint = 'https://api.openai.com/v1/chat/completions';
-      const openaiApiKey = import.meta.env.VITE_OPENAI_API_KEY;
-      const model = 'gpt-3.5-turbo';
-
-      const headers = {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${openaiApiKey}`,
-      };
-
-      const data = {
-        'model': model,
-        'messages': [{ 'role': 'user', 'content': userMessage }],
-      };
-
-      try {
-        const response = await axios.post(openaiEndpoint, data, { headers });
-        const chatResponse = response.data.choices[0].message.content;
-        messages.value.push({ sender: 'bot', message: chatResponse });
-        console.log(chatResponse);
-        // Do something with the chat response.
-      } catch (error) {
-        console.error(error);
-        // Handle the error
-      }
-=======
->>>>>>> parent of ccaae04 (Added API call functionality)
-=======
->>>>>>> parent of ccaae04 (Added API call functionality)
     };
 
     return {
